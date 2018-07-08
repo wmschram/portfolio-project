@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ (pageTitle is defined) ? pageTitle : 'seo.fallback_title'|trans }} | {{ 'seo.domain_name'|trans }}</title>
+        {% include 'shared/includes/_meta_tags.html.twig' %}
+        {% include 'shared/includes/_stylesheets.html.twig' %}
+    </head>
+    <body>
+        {% include 'shared/includes/_header.html.twig' %}
+        <section id="content" vocab="http://schema.org/" typeof="Content">
+            {% block body %}{% endblock %}
+        </section>
+        {% include 'shared/includes/_footer.html.twig' %}
+        {% include 'shared/includes/_cookiebar.html.twig' %}
+        {% include 'shared/includes/_javascript.html.twig' %}
+    </body>
+</html>

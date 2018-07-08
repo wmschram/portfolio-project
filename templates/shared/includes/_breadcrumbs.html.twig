@@ -1,0 +1,13 @@
+<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+    <ul>
+        {% for breadcrumb_item in knp_menu_get_breadcrumbs_array(knp_menu_get_current_item('breadcrumb')) %}
+            <li{% if not loop.last %} class="active"{% endif %} itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a href="{{ breadcrumb_item.uri }}" itemprop="item">
+                    <span itemprop="name">{{ breadcrumb_item.label }}</span>
+                </a>
+                <meta itemprop="position" content="{{ loop.index }}"/>
+                {% if not loop.last %}<span> / </span>{% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,40 @@
+// General colors
+$primary                      : #FFFFFF;
+$primary-dark                 : #FFFFFF;
+$secondary                    : #FFFFFF;
+$secondary-dark               : #FFFFFF;
+$tertiary                     : #FFFFFF;
+$tertiary-dark                : #FFFFFF;
+
+// Background colors
+$bg-body                      : #000000;
+$bg-primary                   : #FFFFFF;
+
+// Typography colors
+$color-primary                : #FFFFFF;
+
+// Border colors
+$border-primary               : #FFFFFF;
+
+// Typography font
+$font-family-base       : 'Ubuntu', sans-serif;
+$font-family-headers    : 'Changa One', cursive;
+
+$font-size-base         : 16px;
+$font-size-small        : 0.875em; // 14px
+$font-size-large        : 1.125em; //18px
+$font-size-h1           : 3.5em; //56px
+$font-size-h2           : 2em; // 32px
+$font-size-h3           : 1.5em; // 24px
+$font-size-h4           : 1.3125em; // 21px
+
+$font-weight-light      : 300;
+$font-weight-normal     : 400;
+$font-weight-medium     : 500;
+$font-weight-bold       : 700;
+
+// Grid breakpoints
+$break-xs               : 675px;
+$break-sm               : 768px;
+$break-md               : 992px;
+$break-lg               : 1200px;

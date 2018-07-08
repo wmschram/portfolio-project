@@ -1,0 +1,58 @@
+// Grid and Reset
+@import "grid";
+
+// Variables and Mixins
+@import "variables";
+@import "mixins";
+
+// Atoms
+@import "atoms/buttons";
+@import "atoms/input";
+@import "atoms/typography";
+
+// Molecules
+@import "molecules/header";
+
+// Organisms
+@import "organisms/hero";
+@import "organisms/footer";
+@import "organisms/blocks";
+
+body {
+  background: $bg-body;
+  color: $color-primary;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main {
+  background: $bg-body;
+}
+
+.hidden {
+  display: none;
+
+  &-xs {
+    @include media(mobile) {
+      display: none;
+    }
+  }
+
+  &-md {
+    @include media(tablet) {
+      display: none;
+    }
+  }
+
+  &-lg {
+    @include media(desktop) {
+      display: none;
+    }
+  }
+}
+
+.no-padding {
+  padding: 0 !important;
+}

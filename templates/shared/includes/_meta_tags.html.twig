@@ -1,0 +1,30 @@
+{% set seoProps = {
+    'title' : (seo.title is defined) ? seo.title ~ ' | ' ~ 'seo.domain_name'|trans : 'seo.fallback_title'|trans,
+    'description' : (seo.description is defined) ? seo.description : 'seo.description'|trans,
+    'image' : app.request.getSchemeAndHttpHost() ~ asset('images/logo.png')
+} %}
+<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+<meta name="robots" content="index, follow"/>
+<meta http-equiv="content-language" content="nl">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="copyright" content="{{ 'seo.domain_name'|trans }}"/>
+<meta name="description" content="{{ seoProps.description }}"/>
+<meta name="image" content="{{ seoProps.image }}">
+
+<meta property="og:title" content="{{ seoProps.title }}">
+<meta property="og:description" content="{{ seoProps.description }}">
+<meta property="og:url" content="{{ app.request.uri }}"/>
+<meta name="og:type" content="website">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ seoProps.title }}">
+<meta name="twitter:description" content="{{ seoProps.description }}">
+
+<meta itemprop="name" content="{{ seoProps.title }}">
+<meta itemprop="description" content="{{ seoProps.description }}">
+<meta itemprop="image" content="{{ seoProps.image }}">
+
+<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>

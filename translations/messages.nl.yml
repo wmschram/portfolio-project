@@ -1,0 +1,4 @@
+seo:
+  domain_name: "test.nl"
+  fallback_title: "Test"
+  description: "Dit is een fallback beschrijving"
