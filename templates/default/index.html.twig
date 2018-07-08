@@ -1,6 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Demo page</h1>
     {% include 'shared/includes/_breadcrumbs.html.twig' %}
+    {% embed 'shared/blocks/_content_block.html.twig' %}
+        {% block header %}
+            <h1>Example page</h1>
+        {% endblock %}
+        {% block body %}
+            <p>This is just a example page. Nothing more, get on with it!</p>
+        {% endblock %}
+    {% endembed %}
 {% endblock %}
