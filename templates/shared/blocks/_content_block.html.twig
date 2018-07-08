@@ -1,0 +1,8 @@
+<div class="content-block {{ (block.additional_classes is defined) ? block.additional_classes }}">
+    <div class="content-block__header {{ (header.additional_classes is defined) ? header.additional_classes }}">
+        {% block header %}{% endblock %}
+    </div>
+    <div class="content-block__body {{ (body.additional_classes is defined) ? body.additional_classes }}">
+        {% block body %}{% endblock %}
+    </div>
+</div>
