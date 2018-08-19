@@ -7,6 +7,9 @@
         <title>{{ (pageTitle is defined) ? pageTitle : 'seo.fallback_title'|trans }} | {{ 'seo.domain_name'|trans }}</title>
         {% include 'shared/includes/_meta_tags.html.twig' %}
         {% include 'shared/includes/_stylesheets.html.twig' %}
+        {% block analytics %}
+            {# This block should be overwritten by the actual page, or be filled through a template. #}
+        {% endblock %}
     </head>
     <body>
         {% include 'shared/includes/_header.html.twig' %}

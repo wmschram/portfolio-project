@@ -1,7 +1,10 @@
-{% extends 'base.html.twig' %}
+{% extends 'default/_template-example.html.twig' %}
 
-{% block body %}
-    {% include 'shared/includes/_breadcrumbs.html.twig' %}
+{% block analytics %}
+    {# Here you can overwrite the analytics block defined in 'base' even though you're extending '_template-example'. #}
+{% endblock %}
+
+{% block content %}
     {% embed 'shared/blocks/_content_block.html.twig' %}
         {% block header %}
             <h1>Example page</h1>
