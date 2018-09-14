@@ -1,55 +1,25 @@
 .btn {
+  background: $tertiary;
+  color: $color-light;
+  display: inline-block;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  padding: 15px 30px;
 
   &:hover {
-
+    color: $color-light;
+    background: $tertiary-dark;
+    border-bottom: none;
+    text-decoration: none;
+    margin-bottom: 0;
   }
 
   &:focus {
-
-  }
-
-  &.btn--primary {
-
-    &:hover {
-
-    }
-
-    &:focus {
-
-    }
-  }
-
-  &.btn--secondary {
-
-    &:hover {
-
-    }
-
-    &:focus {
-
-    }
-  }
-
-  &.btn--tertiary {
-
-    &:hover {
-
-    }
-
-    &:focus {
-
-    }
-  }
-
-  &.btn--basic {
-
-    &:hover {
-
-    }
-
-    &:focus {
-
-    }
+    color: $color-light;
+    background: $tertiary-dark;
+    border-bottom: none;
+    text-decoration: none;
+    margin-bottom: 0;
   }
 
   &.btn--full-width {

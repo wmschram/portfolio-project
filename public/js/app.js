@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+$(document).ready(function(){function t(){var t=$(".js-hero"),e=window.innerWidth,i=window.innerHeight;e>768&&t.css("height",i-175),e<=768&&t.css("height",i-400),e<=650&&i>=600&&t.css("height",i-175)}if($(".js-hero").length>0){var e;t(),$(window).on("resize",function(){clearTimeout(e),e=setTimeout(function(){t()},100)})}$("[data-slide-target]").length>0&&$("[data-slide-target]").on("click",function(){var t=$(this).data("slide-target");$("html, body").animate({scrollTop:$(t).offset().top},500)})});

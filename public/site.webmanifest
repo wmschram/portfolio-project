@@ -1,19 +1,14 @@
 {
-    "name": "Muzikanten-huren.nl",
-    "short_name": "Muzikanten-huren.nl",
+    "name": "Martijn S.",
+    "short_name": "Martijn S.",
     "icons": [
         {
-            "src": "/favicon/android-chrome-192x192.png",
+            "src": "/android-chrome-192x192.png",
             "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "/favicon/android-chrome-256x256.png",
-            "sizes": "256x256",
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#f64848",
+    "background_color": "#f64848",
     "display": "standalone"
 }

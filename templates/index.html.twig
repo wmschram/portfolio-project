@@ -1,16 +1,13 @@
-{% extends 'default/_template-example.html.twig' %}
+{% extends 'base.html.twig' %}
 
-{% block analytics %}
-    {# Here you can overwrite the analytics block defined in 'base' even though you're extending '_template-example'. #}
-{% endblock %}
-
-{% block content %}
-    {% embed 'shared/blocks/_content_block.html.twig' %}
-        {% block header %}
-            <h1>Example page</h1>
-        {% endblock %}
-        {% block body %}
-            <p>This is just a example page. Nothing more, get on with it!</p>
-        {% endblock %}
-    {% endembed %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% include 'homepage/_intro_hero.html.twig' %}
+            {% include 'homepage/_intro_case_musician.html.twig' %}
+            {% include 'homepage/_intro_articles.html.twig' %}
+            {% include 'homepage/_intro_case_medical.html.twig' %}
+            {% include 'homepage/_intro_about.html.twig' %}
+        </div>
+    </div>
 {% endblock %}

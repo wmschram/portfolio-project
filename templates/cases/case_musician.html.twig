@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% embed 'shared/blocks/_content_block.html.twig' %}
+                {% set block = {
+                    'additional_classes': 'content-block'
+                } %}
+                {% block body %}
+                    <div class="col-xs-12 col-sm-8">
+                        <div class="row">
+                            <div class="col-xs-12 no-margin">
+                                <h1>Muzikanten platform</h1>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>Een platform voor muzikanten en artiesten om zichzelf te profileren in vorm van hun
+                                    eigen promotie pagina’s, waar bezoekers direct contact kunnen leggen met de
+                                    muzikanten, zonder tussenkomst van een derde partij.</p>
+                            </div>
+                            <div class="col-xs-12 no-margin">
+                                <h2>Verdieping in het Symfony framework</h2>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>Dit project is ontwikkeld op Symfony 3.4 waarbij enkele bundles zijn toegevoegd zoals
+                                    het KnpMenuBundle voor de breadcrumbs en menu.</p>
+                                <p>De front-end is via Scss en simpele jQuery wat gecompiled word via Gulp. De structuur
+                                    is aan de hand van ATOM design en benamingen via het BEM princiepe. Meer informatie
+                                    daarover kan je
+                                    <a href="{{ path('app_article_future_development') }}">hier</a> vinden.</p>
+                                <p>Het project is opgezet met het idee om meer inzicht te krijgen in de back-end
+                                    mogelijkheden van Symfony, wat er allemaal al in het framework zit en waar mijn
+                                    eigen limitaties als Front-end developer liggen. Zo is het database model,
+                                    controllers en formulieren door mijzelf opgezet, en het account gedeelte inclusief
+                                    login door middel van Symfony documentatie.</p>
+                                <p>Voor het wachtwoord vergeten functionaliteit heb ik de hulp ingeroepen van een
+                                    back-end collega, net als het inrichten van multi uploads.</p>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>Het project is nooit gelanceerd omdat het voor mij alleen om het leerproces ging.
+                                    Interesse om eens in de code te duiken? Stuur een berichtje en ik geef je graag
+                                    toegang tot het github project.</p>
+                                <p>Op behance is zowel de recente als vorige design te vinden.</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+
+            {% embed 'shared/blocks/_content_block.html.twig' %}
+                {% set block = {
+                    'additional_classes': 'content-block--case small musician-background'
+                } %}
+                {% block body %}
+                    <div class="gradient-overlay gradient-overlay--primary" id="anchor-1"></div>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12 no-margin">
+                                <h2>Benieuwd naar de visuals van dit project?</h2>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="https://www.behance.net/gallery/70225317/Musician-platform" target="_blank" class="btn">Resultaat bekijken</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+
+        </div>
+    </div>
+{% endblock %}

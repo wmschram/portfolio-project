@@ -1,3 +1,34 @@
 footer {
+  .footer {
+    background: $tertiary-dark;
+    color: $color-light;
+    display: table;
+    padding: 30px 90px 20px;
+    width: 100%;
 
+    @include media('tablet') {
+      padding: 30px 60px 20px;
+    }
+
+    @include media('mobile') {
+      padding: 20px;
+    }
+
+    h3 {
+      font-size: $font-size-large;
+      font-weight: $font-weight-medium;
+    }
+
+    p {
+      font-size: $font-size-small;
+    }
+
+    a {
+      color: $color-light;
+
+      &:hover {
+        color: $color-links;
+      }
+    }
+  }
 }

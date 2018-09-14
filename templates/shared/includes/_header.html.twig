@@ -1,5 +1,17 @@
-<header>
-    <nav>
-        {{ knp_menu_render('main', {'template': 'shared/menu/_main_menu.html.twig'}) }}
-    </nav>
-</header>
+<div class="header container">
+    <div class="row">
+        <div class="col-xs-12">
+            <header>
+                <a href="{{ path('app_homepage') }}">
+                    <img src="{{ asset('../images/logo.jpg') }}" alt="martijn schram logo">
+                </a>
+                <p>
+                    <a href="https://www.facebook.com/martijn.schram.39" rel="noopener" target="_blank"><i class="fab fa-facebook-f"><span class="sr-only">facebook</span></i></a>
+                    <a href="https://www.linkedin.com/in/schrammartijn" rel="noopener" target="_blank"><i class="fab fa-linkedin-in"><span class="sr-only">linkedin</span></i></a>
+                    <a href="https://github.com/wmschram" rel="noopener" target="_blank"><i class="fab fa-github"><span class="sr-only">github</span></i></a>
+                    <a href="https://www.behance.net/martijnschram" rel="noopener" target="_blank"><i class="fab fa-behance"><span class="sr-only">behance</span></i></a>
+                </p>
+            </header>
+        </div>
+    </div>
+</div>

@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ (pageTitle is defined) ? pageTitle : 'seo.fallback_title'|trans }} | {{ 'seo.domain_name'|trans }}</title>
+        <title>{{ (seo.title is defined) ? seo.title : 'seo.fallback_title'|trans }} | {{ 'seo.domain_name'|trans }}</title>
         {% include 'shared/includes/_meta_tags.html.twig' %}
         {% include 'shared/includes/_stylesheets.html.twig' %}
         {% block analytics %}
-            {# This block should be overwritten by the actual page, or be filled through a template. #}
+            {% include 'shared/includes/_analytics.html.twig' %}
         {% endblock %}
     </head>
     <body>

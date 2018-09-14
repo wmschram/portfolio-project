@@ -1,3 +1,46 @@
-header {
+.header {
+  background: $bg-primary;
+  height: 95px;
 
+  img {
+    display: inline-block;
+    width: 70px;
+    margin-left: 90px;
+
+    @include media('tablet') {
+      margin-left: 60px;
+    }
+
+    @include media('mobile') {
+      margin-left: 20px;
+    }
+
+    &:hover {
+      box-shadow: 0 3px 10px 0 $primary-dark;
+    }
+  }
+
+  p {
+    display: inline-block;
+    float: right;
+    margin: 25px 60px 0 0;
+    font-size: $font-size-h4;
+
+    @include media('mobile') {
+      margin-right: 30px;
+    }
+  }
+
+  a {
+    margin: 0 5px;
+
+    &:hover {
+      color: $color-primary;
+      border-bottom: 0;
+    }
+
+    &:focus {
+      border-bottom: 0;
+    }
+  }
 }

@@ -1,10 +1,136 @@
 .content-block {
+  background: $bg-primary;
+  display: table;
+  padding: 90px;
+  position: relative;
+  width: 100%;
 
-  &__header {
-
+  @include media('tablet') {
+    padding: 60px;
   }
 
-  &__body {
+  @include media('mobile') {
+    padding: 20px;
+  }
 
+  &--hero {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &--case {
+    color: $color-light;
+    padding-top: 155px;
+
+    @include media('tablet') {
+      padding-top: 125px;
+    }
+
+    @include media('mobile') {
+      padding-top: 85px;
+    }
+
+    &.small {
+      padding-top: 75px;
+
+      @include media('tablet') {
+        padding-top: 45px;
+      }
+
+      @include media('mobile') {
+        padding-top: 5px;
+      }
+    }
+
+    &.musician-background {
+      background-image: url("../images/default_small.jpg");
+      background-size: cover;
+    }
+
+    &.medical-background {
+      background-image: url("../images/default_small_2.jpg");
+      background-size: cover;
+    }
+
+    .gradient-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      &--primary {
+        @include linear-gradient(#F64848, #F23E61, .92);
+      }
+
+      &--secondary {
+        @include linear-gradient(#0089CF, #00B0EC, .92);
+      }
+    }
+
+    .seperator {
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      &--top {
+        top: 0;
+      }
+
+      &--bottom {
+        bottom: -5px;
+
+        .seperator__middle {
+          background: url("../images/arrow_down.svg") no-repeat;
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+      }
+
+      &__left {
+        background: $bg-primary;
+        display: inline-block;
+        height: 65px;
+        width: calc(50% - 100px);
+      }
+
+      &__middle {
+        background: url("../images/arrow_down.svg") no-repeat;
+        display: inline-block;
+        height: 65px;
+        width: 200px;
+
+        .fas {
+          position: absolute;
+          top: 20px;
+          left: calc(50% - 10px);
+          font-size: 32px;
+
+          &:hover {
+            color: $tertiary;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &__right {
+        background: $bg-primary;
+        display: inline-block;
+        height: 65px;
+        width: calc(50% - 100px);
+      }
+    }
+  }
+
+  .case-status {
+    color: $color-primary;
+    display: block;
+    font-size: $font-size-small;
+    font-weight: $font-weight-normal;
+    padding: 10px 0 60px;
+
+    @include media('mobile') {
+      padding: 10px 0 30px;
+    }
   }
 }

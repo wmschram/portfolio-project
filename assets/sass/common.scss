@@ -18,11 +18,14 @@
 @import "organisms/footer";
 @import "organisms/blocks";
 
+html {
+  font-size: $font-size-base;
+}
+
 body {
   background: $bg-body;
   color: $color-primary;
   font-family: $font-family-base;
-  font-size: $font-size-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -55,4 +58,19 @@ body {
 
 .no-padding {
   padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }

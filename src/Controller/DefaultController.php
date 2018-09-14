@@ -14,6 +14,11 @@ class DefaultController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('index.html.twig');
+        return $this->render('index.html.twig', [
+            'seo' => [
+                'title' => 'Samen een toegankelijk en betrouwbaar product ontwikkelen',
+                'description' => 'Mijn naam is Martijn Schram ik ben een Front-end developer en samen kunnen we producten ontwikkelen waar we trots op zijn.'
+            ],
+        ]);
     }
 }

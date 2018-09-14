@@ -306,6 +306,11 @@ hr {
     width: 1170px;
   }
 }
+@media (min-width: 1400px) {
+  .container {
+    width: 1370px;
+  }
+}
 .container-fluid {
   margin-right: auto;
   margin-left: auto;

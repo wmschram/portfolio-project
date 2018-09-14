@@ -1,0 +1,39 @@
+{% embed 'shared/blocks/_content_block.html.twig' %}
+    {% set block = {
+        'additional_classes': 'content-block--case musician-background'
+    } %}
+    {% block body %}
+        <div class="gradient-overlay gradient-overlay--primary" id="anchor-1"></div>
+        <div class="seperator seperator--top">
+            {% spaceless %}
+                <div class="seperator__left"></div>
+                <div class="seperator__middle">
+                    <i class="fas fa-angle-down" data-slide-target="#anchor-1"></i>
+                </div>
+                <div class="seperator__right"></div>
+            {% endspaceless %}
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-7">
+            <img src="{{ asset('images/muzikant_platform.png') }}" class="img-responsive"
+                 alt="Muzikanten platform impressie">
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-5">
+            <div class="row">
+                <div class="col-xs-12 no-margin">
+                    <h2>Muzikanten platform.</h2>
+                </div>
+                <div class="col-xs-12">
+                    <p class="font-medium">Een platform voor muzikanten en artiesten om zichzelf te
+                        profileren in
+                        vorm van hun eigen promotie pagina’s, waar bezoekers direct contact kunnen leggen
+                        met de
+                        muzikanten, zonder tussenkomst van een derde partij.
+                        <span class="case-status">(eigen project, niet gelanceerd)</span></p>
+                </div>
+                <div class="col-xs-12">
+                    <a href="{{ path('app_case_musician_platform') }}" class="btn">Meer informatie</a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+{% endembed %}

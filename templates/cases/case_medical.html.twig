@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% embed 'shared/blocks/_content_block.html.twig' %}
+                {% set block = {
+                    'additional_classes': 'content-block'
+                } %}
+                {% block body %}
+                    <div class="col-xs-12 col-sm-8">
+                        <div class="row">
+                            <div class="col-xs-12 no-margin">
+                                <h1>Symfony + optimalisatie</h1>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>Een website dat gemakkelijk in gebruik en simpel te onderhouden
+                                    is? Dit project is extra geoptimaliseerd en werkt met een zeer gebruiksvriendelijk
+                                    CMS op basis van het Symfony framework.</p>
+                            </div>
+                            <div class="col-xs-12 no-margin">
+                                <h2>Site optimalisatie</h2>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>Ongeacht library of framework, je zult altijd doelen moeten stellen over de snelheid
+                                    en betrouwbaarheid van je website. Willen we bijvoorbeeld IE11 nog ondersteunen?
+                                    En moet de website toegankelijk zijn voor slechtzienden?
+                                    Dit soort besluiten bepalen of je gebruikers een optimale ervaring gaan krijgen of
+                                    niet.</p>
+                                <p>Voor verschillende projecten bij CAK Groep zijn deze doelen uitgebreid besproken.
+                                    Daarbij beginnen we met de doelgroep waarna het design ontwikkeld word. Eenmaal
+                                    begonnen met het ontwikkelen gaan we via testomgevingen (OTAP / Continuous
+                                    Integration) testen opzetten en controleren we ook de performance van onze
+                                    projecten. Een gemakkelijke manier is door de Lighthouse Audit tools wat in Google
+                                    Chrome zit.</p>
+                            </div>
+                            <div class="col-xs-12 no-margin">
+                                <h2>Lighthouse audits</h2>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>Niet alleen je code is van belang, ook de manier waarop je de website aan de
+                                    gebruiker serveert. Symfony heeft uit zichzelf al veel optimalisatie mogelijkheden
+                                    welk we daarnaast ook uitbreiden.</p>
+                                <p>Natuurlijk minimaliseer je de CSS en JS al, maar doe je ook aan image
+                                    optimalisation? Hoe ver kan je de compressie opschroeven en
+                                    welke afmetingen kan je de afbeeldingen snijden? En zet de cache aan zodat
+                                    gebruikers niet alle assets keer op keer binnenhalen.</p>
+                                <p>Zet waar mogelijk HTTP/2 aan zodat meerdere assets tegelijk kunnen worden geladen. En
+                                    laad niet te veel assets in, combineer waar mogelijk.</p>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>Audit resultaat voor letselhulpservice.nl</p>
+                                <img src="{{ asset('../images/audit_lhs.jpg') }}" class="img-responsive"
+                                     alt="letselhulpservice.nl audit resultaat">
+                            </div>
+                            <div class="col-xs-12">
+                                <p>Ook met veel afbeeldingen kan een goed en stabiel performance resultaat worden
+                                    behaald zoals bij caresq.nl</p>
+                                <img src="{{ asset('../images/audit_caresq.jpg') }}" class="img-responsive"
+                                     alt="caresq.nl audit resultaat">
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+{% endblock %}

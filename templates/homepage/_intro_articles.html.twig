@@ -1,0 +1,25 @@
+{% embed 'shared/blocks/_content_block.html.twig' %}
+    {% set block = {
+        'additional_classes': 'content-block'
+    } %}
+    {% block body %}
+        <div class="col-xs-12 no-margin">
+            <h3>Samen toekomstbestendig ontwikkelen.</h3>
+        </div>
+        <div class="col-xs-12 col-md-10 col-lg-8">
+            <p>Door gebruik van de BEM methode samen met de regels van ATOM design voorkom je dubbele code
+                en houd je alles overzichtelijk. Ook voor andere ontwikkelaars. Wel zo gemakkelijk.</p>
+            <p><a href="{{ path('app_article_future_development') }}">Lees meer</a></p>
+        </div>
+
+        <div class="col-xs-12 no-margin">
+            <h3>Toegankelijkheid is niet te onderschatten.</h3>
+        </div>
+        <div class="col-xs-12 col-md-10 col-lg-8">
+            <p>Internet is steeds toegankelijker, toch zijn er een hoop websites nauwlijks of zelfs helemaal
+                niet te gebruiken voor gebruikers met beperkingen. Gelukkig zijn er duidelijke richtlijnen
+                (WCAG 2.0), en het kan voor je SEO ook goed zijn!</p>
+            <p><a href="{{ path('app_article_accessibility') }}">Lees meer</a></p>
+        </div>
+    {% endblock %}
+{% endembed %}
