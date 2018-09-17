@@ -9,21 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 class CasesController extends AbstractController
 {
     /**
-     * @Route("/projecten", name="app_case_overview")
-     * @return Response
-     */
-    public function caseOverview(): Response
-    {
-        return $this->render('index.html.twig', [
-            'seo' => [
-                'title' => 'Projecten overzicht',
-                'description' => 'Wat zijn projecten waar ik trots op ben, en echt van heb geleerd?'
-            ],
-        ]);
-    }
-
-    /**
-     * @Route("/projecten/symfony-sulu-cms", name="app_case_symfony")
+     * @Route("/symfony-sulu-cms", name="app_case_symfony")
      * @return Response
      */
     public function caseSymfonySuluCMS(): Response
@@ -37,7 +23,7 @@ class CasesController extends AbstractController
     }
 
     /**
-     * @Route("/projecten/muzikanten-platform", name="app_case_musician_platform")
+     * @Route("/muzikanten-platform", name="app_case_musician_platform")
      * @return Response
      */
     public function caseMusicianPlatform(): Response

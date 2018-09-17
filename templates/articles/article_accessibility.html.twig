@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% embed 'shared/blocks/_content_block.html.twig' %}
+                {% block body %}
+                    <div class="col-xs-12 col-md-8">
+                        <div class="row">
+                            <div class="col-xs-12 no-margin">
+                                <h1>Toegankelijkheid is niet te onderschatten.</h1>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>Een website hoort aantrekkelijk te zijn voor de doelgroep om zo de gebruikers te
+                                    overtuigen. Echter zijn er een hoop mensen, ook in Nederland, die deze ervaring maar
+                                    gedeeltelijk meekrijgen. Mensen die een beperking ervaren zoals slechtziendheid of
+                                    zelfs blindheid hebben nog vaak moeite om gemakkelijk door een website heen te
+                                    komen. En daarom zijn er richtlijnen die helpen om een website toegankelijker te
+                                    maken. Deze richtlijnen (WCAG 2.0) zijn internationaal en een goede houvast voor
+                                    iedere developer.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12 no-margin">
+                                <h2>Kleur contrast en typografie</h2>
+                            </div>
+                            <div class="col-xs-12 col-sm-8">
+                                <p>Google Chrome heeft in zijn development tools een kleur contrast controle zitten, om
+                                    zo te zien of het contrast voldoet aan de richtlijnen.</p>
+                                <p>Een contrast van 4.5 is nodig op normale tekst van 16px of groter. Voor het hoogste
+                                    nivea is een contrast van 7.0 nodig.</p>
+                                <p>Nu kan het voorkomen dat de huisstijl van een project niet genoeg contrast heeft. In
+                                    dat geval zou je ook een 'hoog contrast mode' kunnen toevoegen. Door in SCSS
+                                    variables te overschrijven op het moment dat je gaat compilen, zou je een tweede css
+                                    bestand kunnen maken waarbij je website een hoger contrast heeft. Vervolgens kan je
+                                    de gebruiker door middel van een herkende knop het contrast laten verhogen.</p>
+                                <p>Een goed voorbeeld komt van strijen.nl waarbij rechtsboven een hoog contrast knop
+                                    zit. Daar is ook de typografie te vergroten. Dit kan op dezelfde manier als het hoog
+                                    contrast, door goed gedefineerde variables te overschrijven tijdens het compilen van
+                                    je CSS.</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 no-margin">
+                                <p><img src="{{ asset('../images/accessibility_contrast.jpg') }}" class="img-responsive"
+                                        alt="contrast voorbeeld"></p>
+                            </div>
+                            <div class="col-xs-12 no-margin">
+                                <h2>Navigeerbaar</h2>
+                            </div>
+                            <div class="col-xs-12 col-md-8">
+                                <p>Naar contrast en typografie is een belangrijk deel de manier waarop slechtzienden of
+                                    gebruikers met een andere beperking door een website nagiveren. Heb je wel eens een
+                                    websites geprobeerd te gebruiken via een screenreader?</p>
+                                <p>Chrome heeft zijn eigen screenreader plugin onder de naam Chromevox.</p>
+                            </div>
+                            <div class="col-xs-12 no-margin">
+                                <h2>Bronnen</h2>
+                            </div>
+                            <div class="col-xs-12">
+                                <p><a href="http://iacobien.nl/richtlijnen/schema-wcag-2-0/" target="_blank"
+                                      rel="noopener">Duidelijk WCAG 2.0 overzicht</a>
+                                </p>
+                                <p><a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0"
+                                      target="_blank" rel="noopener">Officiele WCAG 2.0 criteria</a>
+                                </p>
+                                <p>
+                                    <a href="https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn"
+                                       target="_blank" rel="noopener">Chromevox screenreader</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+{% endblock %}

@@ -32,10 +32,11 @@
   }
 
   a {
+    color: $color-primary;
     margin: 0 5px;
 
     &:hover {
-      color: $color-primary;
+      color: $color-links;
       border-bottom: 0;
     }
 

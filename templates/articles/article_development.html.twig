@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% embed 'shared/blocks/_content_block.html.twig' %}
+                {% block body %}
+                    <div class="col-xs-12 col-md-8">
+                        <div class="row">
+                            <div class="col-xs-12 no-margin">
+                                <h1>Samen toekomstbestendig ontwikkelen.</h1>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>Een website ontwikkelen doe je niet alleen, je werkt samen met collega's en na de
+                                    oplevering van de eerste versie is het zomaar mogelijk dat er extra onderdelen
+                                    gemaakt gaan worden. Als er op dat moment geen structuur in je code zit heb je een
+                                    probleem.</p>
+                                <p>Door gebruik van de BEM methode samen met de regels van ATOM design voorkom je
+                                    dubbele code en houd je alles overzichtelijk. Ook voor andere ontwikkelaars.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12 no-margin">
+                                <h2>ATOM design</h2>
+                            </div>
+                            <div class="col-xs-12 col-md-8">
+                                <p>ATOM design geeft structuur aan je code. Het deelt de code op in Atoms, Modules,
+                                    Organisms, Templates en uiteindelijk pagina's. Een pratisch voorbeeld:</p>
+                                <p>Een header is een organism dat uit meerdere moleculen bestaat. Namelijk Een menu, een
+                                    zoekfunctie en een logo. Deze onderdelen/moleculen bestaan vervolgens uit meerdere
+                                    atomen. Namelijk een menu item, of een invoerveld.</p>
+                                <p>Door SCSS bestanden op te splitsen in deze 'categorie' mappen zul je al snel
+                                    overzicht krijgen over waar bepaalde code gevonden kan worden. Een groot project kan
+                                    namelijk uit tientallen verschillende SCSS bestanden bestaan.</p>
+                            </div>
+                            <div class="col-xs-12 no-margin">
+                                <h2>BEM methode</h2>
+                            </div>
+                            <div class="col-xs-12 col-md-8">
+                                <p>Naast een goede structuur in je bestanden is de benaming eigenlijk het belangrijkst
+                                    van allemaal. Iemand anders moet de code ook kunnen gebruiken. BEM staat voor Block,
+                                    Element and Modifier.</p>
+                                <p>Een block is iets wat los staat van zichzelf zoals een header of input veld. Een
+                                    element is onderdeel van een block en wordt dus nooit los gebruikt. Als laatst heb
+                                    je nog uitzonderingen op je blokken en/of elementen. Denk aan de disabled state, of
+                                    misschien wil je het blok highlighted maken.</p>
+                                <p>Een block is een beschrijvende css class, een voorbeeld zou zijn "menu", wat zoals
+                                    verwacht een menu zal bevatten. Een element daarbinnen is "menu__item". Je herkent
+                                    een element door de twee underscores. Als laatst kan het zijn dat je meerdere menu's
+                                    hebt en voor het tweede menu een uitzondering wilt maken. Dat kan via
+                                    "menu--state-collapsed".</p>
+                            </div>
+                            <div class="col-xs-12 no-margin">
+                                <h2>Bronnen</h2>
+                            </div>
+                            <div class="col-xs-12">
+                                <p><a href="http://bradfrost.com/blog/post/atomic-web-design/"
+                                      target="_blank" rel="noopener">ATOM design</a>
+                                </p>
+                                <p><a href="http://getbem.com/introduction/" target="_blank"
+                                      rel="noopener">BEM methode</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endblock %}
+            {% endembed %}
+        </div>
+    </div>
+{% endblock %}
