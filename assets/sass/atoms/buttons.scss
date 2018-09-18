@@ -25,4 +25,17 @@
   &.btn--full-width {
     width: 100%;
   }
+
+  &--back {
+    margin-top: 30px;
+    background: $secondary;
+
+    &:hover {
+      background: $secondary-dark;
+    }
+
+    &:focus {
+      background: $secondary-dark;
+    }
+  }
 }

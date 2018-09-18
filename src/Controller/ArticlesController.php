@@ -31,7 +31,7 @@ class ArticlesController extends AbstractController
         return $this->render('articles/article_development.html.twig', [
             'seo' => [
                 'title' => 'Samen toekomstbestendig ontwikkelen',
-                'description' => 'Door gebruik van de BEM methode samen met de regels van ATOM design voorkom je dubbele code en houd je alles overzichtelijk.'
+                'description' => 'Door gebruik van de BEM methode samen met de regels van ATOM design voorkom je dubbele code en  alles overzichtelijk.'
             ],
         ]);
     }
