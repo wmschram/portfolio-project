@@ -9,6 +9,7 @@ This is my personal portfolio project running on the Symfony 4 framework.
 - Basic SEO (meta tags, fallback, rich data on Menu, Breadcrumbs)
 - KnpMenuBundle (MainMenu + Breadcrumbs)
 
+Sidenote: i'm currently not using menu's or breadcrumbs until the site has more volume.
 
 #### SCSS
 This project is build with ATOM design in mind.
