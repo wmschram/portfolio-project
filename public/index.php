@@ -5,10 +5,10 @@ use Symfony\Component\Debug\Debug;
 use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\HttpFoundation\Request;
 
-//require __DIR__.'/../vendor/autoload.php';
-require __DIR__.'/../symfony/vendor/autoload.php';
+//require __DIR__.'/../vendor/autoload.php'; // disable on prod
+require __DIR__.'/../symfony/vendor/autoload.php'; // enable on prod
 
-$_SERVER['APP_ENV']='prod';
+$_SERVER['APP_ENV']='prod'; // enable on prod
 
 // The check is to ensure we don't use .env in production
 if (!isset($_SERVER['APP_ENV'])) {
